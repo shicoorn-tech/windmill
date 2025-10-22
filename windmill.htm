@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://jsdown.92wailian.com/js57/ -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>转盘抽奖</title>
+
+		<link rel="stylesheet" href="./windmill_files/index.css">
+		<style>
+			.ai-operation:hover {
+				color: #ff480d;
+				/* No quotes around the color value */
+			}
+		</style>
+		<style id="market-mate-selection-bubble-font">
+			@font-face {
+				font-family: market-mate-iconfont;
+				src: url(data:font/woff;base64,d09GRgABAAAAAAawAAsAAAAACkwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADsAAABUIIslek9TLzIAAAFEAAAARAAAAGA8FkjXY21hcAAAAYgAAABfAAABovyZ0OZnbHlmAAAB6AAAAqUAAANQhOlcg2hlYWQAAASQAAAALwAAADYsWXFlaGhlYQAABMAAAAAcAAAAJAfeA4ZobXR4AAAE3AAAAA4AAAAUFAAAAGxvY2EAAATsAAAADAAAAAwBvAKsbWF4cAAABPgAAAAfAAAAIAEWAIRuYW1lAAAFGAAAAVgAAAL317GhgXBvc3QAAAZwAAAAQAAAAFJzPFE%2FeJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiBmg4gCACY7BUgAeJxjYGFhYJzAwMrAwNTJdIaBgaEfQjO%2BZjBi5ACKMrAyM2AFAWmuKQwHnjE%2BY2du%2BN%2FAwMB8hwFIMjCiKGICAGMrDGh4nO2Q0Q2AIAwFrxQhIY7ihyM4iF8O3zWwtI7hS46mB%2BHjARugzuFUkAdh5XYr4ZURvnL63nwKxdT6nGCS0yN%2BN%2BK3eOGi8WeP8%2Fq2uhpLVutWkvCarNatJ5QXVtwRRgB4nE1SPW%2FTUBR91ybvxbFdJ9QfpYnrxiY2UhuHuKmDEvUjInRL01QdqYSg6ccGBYmhDF1YK9EFhNSCWrFUQogFFBjCDguqqrLyD7pUTDE8uwFxZV%2Bfe3TOk%2B99F11C6PdT9iO7hVLIQtfRFEKgKimZxLCTsydTpXLO12I5m9aU1WIqrSlL5AEwXShNgzcCpOSCOQDyCHjTwD6pVIJutRp0KxWoVauQDbrpdNAdHoZaOg214a9u83bTjdKsXqwU9Sgxr8x6sFM3OyZ96rAZobOOJHWSRrBjJC8QbBo%2F3L6ZfvW%2BWS8iQvs4ZrtsjXZRRTPoJlpGj9Bj2s1kyR4DE%2BtghUlWq6CEyfOnYCJMJdsqW6ZNgU9ZlUow1Ye1FVOsySx9QY2oAlhkAEJUHvRnwNdUjR7xv%2BPvCbkJB5Y4cpVwB3ImIx9E8CiEb3lOELhjY1yMq5zA9%2FZ24f5LZp2NE4Mk2NypxSbINUKYNyTJaEoy3nt43DcInBoXGX2%2FxZzNEo4jsxn5i5zZDuF2BJNUwQnjxnloOOcXXtPolbFAYostTAQMD5IcJPh4KvgscAonhkpRpMo77xFi6Py%2B0z1YRDryEMphgh0XHLs8DWVfGwFNJZhoqiwBNh225NiObVIGy3QIqlf2yz7zc3Gjfa%2B9OzSUybxYXWmv72WNQeXWIcYSSZGlQr6x0Flo5Av%2FwNacLI%2BO7q%2B1V9ae62ntyrPVu6sbrUN8GUsYw%2Blys%2BHSaDQ%2FNefzrpufbyIaLP3Pb%2BwH9gbSkIN8er8Xg5%2FIeuHaRhdB99O2YilZpaQfFVkTD4Z0KKMqWjMpXpJ4KBTrUkLkJUPtiZ7FjFmeZ%2FVOLG8OCxwzpii9E475JfFiQqoXg3eRpaUaR6GkL%2B8dYqrkBCpVEPoDs%2Bel1QAAAHicY2BkYGAA4jIejqx4fpuvDNwsDCDwZK7YFgT9v5WFgbkayOVgYAKJAgD9BQlLAHicY2BkYGBu%2BN%2FAEMPCAAJAkpEBFbACAEcLAm54nGNhYGBgQcMAAQQAFQAAAAAAAABkAQQBWAGoeJxjYGRgYGBlqGBgZwABJiDmAkIGhv9gPgMAFSoBmwB4nI2SzU7CQBSFz%2FBnhEQTNa5nhSSm5WdjwlIS2LPo1pQy5a%2FtNNOBhIcx8R18Gje%2BhC%2FgoYwbZEGbufnuuefezrQFcIdvCByve64jCzwwO3IFV3hyXKXuO66RXx3X0ULguEE9dNzEM7aOW5z4wQmids2sjU%2FHAh18Oa7gRgjHVXTEreMa%2BcVxHY%2FizXGD%2BtZxE4F4d9xCW%2FyMjAqtmsvZXq4incU6s2loNsp6KXXvT5uqxTYJzbnSOS1QpljpTPb93rnyRGXK%2FD222C0G1sYyNjqVY1ZVkmiZG71WkfWX1ubDbjd2uh%2FpFCMYKL4%2ByziHxAx7xhUiaGSIy2iR0mGwocfCK7OD3%2Fvnm1Jd8AMkpf%2FSrkt9AVWDgvohl%2Bjz1%2Bhd3D2hmpUTTk9bYMddD6hauiWXYU9KGrtexRMlZIm8rK2pRNR9LMuuHEN0eccnfr%2FcQ%2FoLJz6TTHicY2BigAAuBuyAlZGJkZmRhZGVkY2BP1G3OCO1KiMzuzQxKzMvnTUtMa8yk604v7S4NJ81rRQow8AAAAfrDTc%3D)
+			}
+
+			.market-mate-selection-bubble-font {
+				font-size: 14px;
+				font-style: normal;
+				font-family: market-mate-iconfont !important
+			}
+		</style>
+	</head>
+
+	<body style="zoom: 1;">
+		<input id="zhbeboqn2v" type="hidden" name="market-mate-for-1688" value="installed" data-version="1.0.14"
+			data-package="chrome-store" data-id="kphldkppgfpjadpabfkghmjbhpcmgpdg"
+			data-content-script-message-host-web-app-channel-id="kphldkppgfpjadpabfkghmjbhpcmgpdg-content-script-message-with-host-web-app">
+		<div class="box-lottery">
+			<div class="lottery-wrap" style="transform: rotate(-45deg);">
+				<div class="wrap-windmill">
+					<span class="lottery-span1" data-id="0">
+						<i>亲爱的你呀</i>
+					</span>
+					<span class="lottery-span2" data-id="1">
+						<i>骄傲的少年</i>
+					</span>
+					<span class="lottery-span3" data-id="2">
+						<i>You are my sunshine</i>
+					</span>
+					<span class="lottery-span4" data-id="3">
+						<i>没关系</i>
+					</span>
+
+					<span class="lottery-span6" data-id="4">
+						<i>零食</i>
+					</span>
+					<span class="lottery-span7" data-id="5">
+						<i>拔牙</i>
+					</span>
+					<span class="lottery-span8" data-id="6">
+						<i>妹妹桑内</i>
+					</span>
+					<span class="lottery-span5" data-id="7 ">
+						<i>谢谢参与</i>
+					</span>
+				</div>
+				<div class="wrap-container">
+					<div class="restart">restart</div>
+					<div class="poemmill">
+						<p>1.亲爱的你呀我们好久没见</p>
+						<p>2.有没有长大一点儿</p>
+						<p>3.破旧的以前 游不住的渔湾</p>
+						<p>4.停在荒草漫天</p>
+					</div>
+				</div>
+			</div>
+			<a class="lottery-btn" href="javascript:void(0);"><i></i>立即抽奖</a>
+			<!-- <div class="lottery-poem"></div> -->
+		</div>
+
+		<script src="./windmill_files/jquery-1.9.0.min.js"></script>
+		<script src="./windmill_files/anime.min.js"></script>
+		<script src="./windmill_files/lottery.js"></script>
+		<script>
+			var Lottery = Turntable.create();
+			$('.lottery-btn').on('click', function() {
+				var num = Math.floor(Math.random() * 8);
+				Lottery = Turntable.create();
+				Lottery.start(num, function(index) {
+					// alert($('span').eq(index).find('i').text());
+					console.log('index', index, 'lottery-span', 'lottery-span' + (index + 1));
+					if (window.confirm($('span').eq(index).find('i').text())) {
+						
+
+						let poemmill = ["<p>亲爱的你呀 我们好久没见</p ><p>有没有长大一点儿</p ><p>破旧的以前 留不住的渔湾</p ><p>停在荒草漫天</p >",
+							"<p>奔跑吧 骄傲的少年</p ><p>年轻的心里面 是坚定的信念</p ><p>燃烧吧 骄傲的热血</p ><p>胜利的歌我要再唱一遍</p >",
+							"<p>You are my shine my only shine</p ><p>You make me happy when skies are gray</p ><p>You'll never know dear how much I love you</p ><p>Please don't take my sunshine away</p >",
+							"<p>爸爸开车走错了</p ><p>妈妈说：没关系</p ><p>就当看风景了</p ><p>妈妈煮饭烧糊了</p ><p>爸爸说：没关系</p ><p>刚好今天出去吃</p ><p>我成绩没考好</p ><p>他们说：没关系</p ><p>学习在于每一天</p >",
+							"<p>外婆给了我</p ><p>一大袋</p ><p>变质的零食</p ><p>我问妈妈</p ><p>是过期了吗</p ><p>妈妈红了眼睛说</p ><p>不是</p ><p>是我们回来晚了</p >",
+							"<p>昨晚</p ><p>我的一颗牙齿</p ><p>想去旅行</p ><p>他一定很后悔</p ><p>再也尝不到</p ><p>棒棒糖的美味了</p >",
+							"<p>美美桑内</p ><p>一个劲儿的叭叭</p ><p>还有拳拳</p ><p>咕噜咕噜盆盆二</p >"
+						]
+						
+						if(index < 7){
+							$(".lottery-wrap").addClass("lottery-poem");
+							$(".poemmill").html(poemmill[index])
+							$(".wrap-windmill").fadeOut();
+							$(".wrap-container").fadeIn();
+							// restart
+							$('.lottery-btn').hide();
+						}
+						
+
+					}
+				});
+			});
+
+			$('.restart').on('click', function() {
+				$(".wrap-windmill").fadeIn();
+				$(".wrap-container").fadeOut();
+				$('.lottery-btn').show();
+				$(".lottery-wrap").removeClass("lottery-poem");
+			})
+		</script>
+
+
+	</body>
+	<style data-styled="">
+		@font-face {
+			font-family: "AlimamaShuHeiTi";
+			font-weight: 700;
+			src:
+				url("https://1688-pc-plugin-smart-link.oss-cn-beijing.aliyuncs.com/material-resource/guidance/AlimamaShuHeiTi-Bold.woff2") format("woff2"),
+				url("https://1688-pc-plugin-smart-link.oss-cn-beijing.aliyuncs.com/material-resource/guidance/AlimamaShuHeiTi-Bold.woff") format("woff") url("https://1688-pc-plugin-smart-link.oss-cn-beijing.aliyuncs.com/material-resource/guidance/AlimamaShuHeiTi-Bold.ttf") format("ttf") url("https://1688-pc-plugin-smart-link.oss-cn-beijing.aliyuncs.com/material-resource/guidance/AlimamaShuHeiTi-Bold.otf") format("otf");
+			font-variation-settings: normal;
+			font-display: swap;
+		}
+	</style>
+	<style data-styled="active" data-styled-version="6.1.19"></style>
+	<style data-styled="active" data-styled-version="6.1.19"></style>
+	<style data-styled="active" data-styled-version="6.1.19"></style>
+	<div id="plasmo-shadow-container" style="z-index: 2147483647; position: static;">
+		<div class="sc-gGKoUb ksHbmt"></div>
+		<div class="sc-ipUnzB iMUVuL"></div>
+	</div></template>
+	<div style="display: none;"></div>
+	</div>
+	<div id="wfu2sxsfgczu"
+		style="font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; position: absolute; z-index: 2147483647; width: 32px; height: 32px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.75); overflow: hidden; transition: width 0.3s; transform-origin: right center; cursor: pointer; display: block; left: 884.313px; top: 116.052px;">
+		<div
+			style="width: 100%; height: 100%; display: flex; align-items: center; box-sizing: border-box; justify-content: flex-start;">
+			<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22b%22%20x1%3D%221%22%20x2%3D%220%22%20y1%3D%22.525%22%20y2%3D%22.5%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FF4000%22%2F%3E%3Cstop%20offset%3D%2298.571%25%22%20stop-color%3D%22%23FF702D%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22c%22%20x1%3D%221%22%20x2%3D%220%22%20y1%3D%22.525%22%20y2%3D%22.5%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FF4000%22%2F%3E%3Cstop%20offset%3D%2298.571%25%22%20stop-color%3D%22%23FF702D%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22d%22%20x1%3D%221%22%20x2%3D%220%22%20y1%3D%22.525%22%20y2%3D%22.5%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FF4000%22%2F%3E%3Cstop%20offset%3D%2298.571%25%22%20stop-color%3D%22%23FF702D%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath%20id%3D%22a%22%3E%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%220%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cpath%20fill%3D%22url%28%27%23b%27%29%22%20fill-rule%3D%22evenodd%22%20d%3D%22M9%201.072q-1.528.074-3.056.223c-2.692.263-4.704%202.442-4.832%205.144q-.037.774-.061%201.56h2q.024-.738.059-1.466.061-1.3.917-2.215.85-.91%202.11-1.033Q7.57%203.145%209%203.075zm0%2019.853q-1.351-.067-2.703-.195-1.29-.123-2.182-1.083-.902-.97-.966-2.314-.056-1.189-.09-2.333H1.056q.036%201.19.095%202.427c.13%202.753%202.212%205.033%204.956%205.294q1.446.137%202.892.207zm7%201.945v-2.004q.845-.056%201.69-.136%201.294-.123%202.192-1.085.905-.97.968-2.312.056-1.189.091-2.333h2.001q-.035%201.19-.094%202.427c-.13%202.755-2.224%205.034-4.97%205.294q-.94.089-1.878.15m0-19.736V1.129q1.021.066%202.044.166c2.693.262%204.716%202.44%204.844%205.144q.036.774.06%201.56h-2q-.024-.738-.058-1.466-.061-1.297-.921-2.213-.854-.911-2.12-1.034-.924-.09-1.85-.152%22%2F%3E%3Cpath%20fill%3D%22url%28%27%23c%27%29%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.438%2010.969a4.969%204.969%200%201%201-9.938%200%204.969%204.969%200%200%201%209.938%200m-2%200q0-1.23-.87-2.1Q12.698%208%2011.47%208t-2.1.87q-.869.87-.869%202.099t.87%202.1%202.099.869%202.1-.87q.869-.87.869-2.099%22%2F%3E%3Cpath%20fill%3D%22url%28%27%23d%27%29%22%20fill-rule%3D%22evenodd%22%20d%3D%22M15.761%2015.282a1%201%200%200%201%200-2h2.46a1%201%200%201%201%200%202z%22%20transform%3D%22rotate%2845%2014.761%2013.282%29%22%2F%3E%3C%2Fsvg%3E"
+				style="width: 24px; height: 24px; margin: 0px 4px;">
+			<div
+				style="height: 24px; align-items: center; padding-right: 4px; display: none; width: 60px; box-sizing: content-box;">
+				<span
+					style="font-size: 12px; color: rgb(255, 255, 255); white-space: nowrap; overflow: hidden;">同款比价</span><img
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAgMAAADQNkYNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAMUExURUdwTP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2Fwaf0AoAAAADdFJOUwBAggm5adcAAACwSURBVHja7dlBDcMwEAXRraMqh4IohFAIsxpEIZRHC6EQDMMnbzCMT4k0c1%2FJz9cfZmYXqbyDto09YN9swSqZPVhL5gjWmpmVnzR%2B0qkFY0pyTHLMi2OeHLNyzE2MGDFixIgRI0aMGDHXxuwcUznmxzH%2FuRP%2BMM7nn4wpg1M6pzROqVKkSJEiRYoUKVKkSDknJTilcMrCKSunPOZmwconzqkhlc%2B1sC1rwO6fMDM7fwe7vJPvBLjXPwAAAABJRU5ErkJggg%3D%3D"
+					style="width: 10px; height: 10px; display: block;"></div>
+			<div style="width: 1px; height: 100%; background-color: rgba(255, 255, 255, 0.4);"></div>
+			<div
+				style="width: 100%; height: 100%; position: relative; display: flex; justify-content: center; align-items: center; flex: 1 1 0%;">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAAAAXNSR0IArs4c6QAAAohJREFUeNrt3VFu2zAQBFAdjUfbm%2FE0Sx7DTWOgRdtYCYo0GhfvETD87QFXsmzuHs9sj641X9dt3e7vuvY4%2BGpdXet2sqZYLglDKBfb42cYQrncSRgnSyRBcdxX18G%2FiUMkUXGIJCoOkYTY462P1%2BX9Mmuu22etg8%2FbH8pW0P6wR6L2hz0StT8%2Bec2Dv3f%2FEBWtqIKlaMVYUyBxgShaQdZNIALh45d0z7QEgpL1QiAIJNn59xBPs2J0%2BaYeZQ%2F3WJ72cqbLFSSMghWmy%2F4I4%2FoRpssNb5gu5SrMmuII4%2B4qzB6%2F7hIH2wKs6VIepkscgaVLGE8YSpc4LohFFIGx3FfXHu6lAAAAAAAAAAAAAAAA4FM4rJM7FXcKJ%2FF49HTO8Mt0ORYdo0uPkyBdWmsE6dKaKciaumVFxaG9n2nRvG0PTTC1ieWRLpMRomjFH6XL9JAoaxpXEWQP80NemBaNadGPGJuHQP4kEAwnfkwgKFnnBIJAnlGXadFRulzSwwgkjILlByr8hHvCnxzwN6Bn0%2BX%2Byl9JOdfldtdxBM6tqVgdjrRxag9xvHAsmvdDmcIIs8cea5oV%2FYPmMwAAAAAAAAAAAAAAAPAf2mOPru%2Bvju2kzYq%2BrymWi6MQS8ixaKEEhKFxQJAujWdivHUmXem6MA7N%2FaKsqYFZVBxa%2FAXp0iRWm1geWVMj5SB7aDUeZU3N%2BKMYeBRlDwNdonQZThxlTUPBjsPYPATyG4FgOPFjAkHJOicQPhiI7yHHYVo0pkW%2FydNe3rWmghWlS8EKY3%2BE6bI%2FwtgfYfawP16ZFs1DXeII0yWOMF3iCLOHOE7lH2zrcmd1WSim4l4cijACY%2Blac817OPd3z16kvgHvXrUbE5n%2FzAAAAABJRU5ErkJggg%3D%3D"
+					style="width: 10px; height: 10px; padding-left: 2px;">
+				<div
+					style="position: absolute; top: 40px; left: -5px; font-size: 12px; border-radius: 5px; padding: 10px; background-color: rgba(0, 0, 0, 0.75); display: none;">
+					<div
+						style="position: absolute; width: 0px; height: 0px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 5px solid rgba(0, 0, 0, 0.75); top: -5px; left: 10px;">
+					</div>
+					<div style="color: rgba(255, 255, 255, 0.9); text-wrap: nowrap; white-space-collapse: collapse;">
+						暂时关闭此按钮</div>
+					<div style="height: 1px; background-color: rgba(255, 255, 255, 0.2); margin: 6px 0px;"></div>
+					<div style="color: rgba(255, 255, 255, 0.9); text-wrap: nowrap; white-space-collapse: collapse;">
+						调整此按钮位置</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>
