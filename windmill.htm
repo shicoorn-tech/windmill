@@ -6,7 +6,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>转盘抽奖</title>
+		<title>幸运大风车</title>
 
 		<link rel="stylesheet" href="./windmill_files/index.css">
 		<style>
@@ -81,10 +81,10 @@
 		<script src="./windmill_files/lottery.js"></script>
 		<script>
 			var Lottery = Turntable.create();
+			var audio;
 			$('.lottery-btn').on('click', function() {
 				var num = Math.floor(Math.random() * 8);
 				Lottery = Turntable.create();
-				var audio;
 				Lottery.start(num, function(index) {
 					// alert($('span').eq(index).find('i').text());
 					// start windmill here
@@ -183,4 +183,5 @@
 	</div>
 
 </html>
+
 
