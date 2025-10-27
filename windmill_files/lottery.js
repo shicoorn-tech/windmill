@@ -21,7 +21,7 @@ var Turntable = (function () {
             target: '.lottery-wrap', // 旋转对象
             easing: 'easeInOutSine', // anime.js 动画曲线
             isplay: false, // 动画是否在播放
-            duration: 3000, // 动画时长
+            duration: 5000, // 动画时长
             rotateNum: 5, // 旋转圈数
             total: 8, // 奖励个数
             offset: 0 }, // 旋转偏移值
@@ -73,4 +73,5 @@ var Turntable = (function () {
     }]);
 
     return Turntable;
+
 })();
