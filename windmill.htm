@@ -56,7 +56,7 @@
 						<i>拔牙</i>
 					</span>
 					<span class="lottery-span8" data-id="6">
-						<i>妹妹桑内</i>
+						<i>没出息</i>
 					</span>
 					<span class="lottery-span5" data-id="7 ">
 						<i>谢谢参与</i>
@@ -84,19 +84,22 @@
 			$('.lottery-btn').on('click', function() {
 				var num = Math.floor(Math.random() * 8);
 				Lottery = Turntable.create();
+				var audio;
 				Lottery.start(num, function(index) {
 					// alert($('span').eq(index).find('i').text());
+					// start windmill here
+					// audio = "windmill.wav";
+                    // audio = new Audio(audio); 
+					// audio.play();
 					console.log('index', index, 'lottery-span', 'lottery-span' + (index + 1));
 					if (window.confirm($('span').eq(index).find('i').text())) {
-						
-
 						let poemmill = ["<p>亲爱的你呀 我们好久没见</p ><p>有没有长大一点儿</p ><p>破旧的以前 留不住的渔湾</p ><p>停在荒草漫天</p >",
 							"<p>奔跑吧 骄傲的少年</p ><p>年轻的心里面 是坚定的信念</p ><p>燃烧吧 骄傲的热血</p ><p>胜利的歌我要再唱一遍</p >",
 							"<p>You are my shine my only shine</p ><p>You make me happy when skies are gray</p ><p>You'll never know dear how much I love you</p ><p>Please don't take my sunshine away</p >",
 							"<p>爸爸开车走错了</p ><p>妈妈说：没关系</p ><p>就当看风景了</p ><p>妈妈煮饭烧糊了</p ><p>爸爸说：没关系</p ><p>刚好今天出去吃</p ><p>我成绩没考好</p ><p>他们说：没关系</p ><p>学习在于每一天</p >",
 							"<p>外婆给了我</p ><p>一大袋</p ><p>变质的零食</p ><p>我问妈妈</p ><p>是过期了吗</p ><p>妈妈红了眼睛说</p ><p>不是</p ><p>是我们回来晚了</p >",
 							"<p>昨晚</p ><p>我的一颗牙齿</p ><p>想去旅行</p ><p>他一定很后悔</p ><p>再也尝不到</p ><p>棒棒糖的美味了</p >",
-							"<p>美美桑内</p ><p>一个劲儿的叭叭</p ><p>还有拳拳</p ><p>咕噜咕噜盆盆二</p >"
+							"<p>本来应该从从容容游刃有余</p ><p>现在却是匆匆忙忙连滚带爬</p ><p>睁眼说瞎话 你在哽咽什么呢</p ><p>你在哭什么哭 没出息</p >"
 						]
 						
 						if(index < 7){
@@ -114,6 +117,10 @@
 			});
 
 			$('.restart').on('click', function() {
+				// start train here
+				// audio = "train.wav";
+                // audio = new Audio(audio); 
+				// audio.play();
 				$(".wrap-windmill").fadeIn();
 				$(".wrap-container").fadeOut();
 				$('.lottery-btn').show();
@@ -174,4 +181,5 @@
 			</div>
 		</div>
 	</div>
+
 </html>
