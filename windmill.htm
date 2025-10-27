@@ -83,14 +83,15 @@
 			var Lottery = Turntable.create();
 			var audio;
 			$('.lottery-btn').on('click', function() {
+				// start windmill here
+				audio = "./windmill_files/windmill.mp3";
+                audio = new Audio(audio); 
+				audio.play();
 				var num = Math.floor(Math.random() * 8);
 				Lottery = Turntable.create();
 				Lottery.start(num, function(index) {
 					// alert($('span').eq(index).find('i').text());
-					// start windmill here
-					audio = "./windmill_files/windmill.mp3";
-                    audio = new Audio(audio); 
-					audio.play();
+					
 					console.log('index', index, 'lottery-span', 'lottery-span' + (index + 1));
 					if (window.confirm($('span').eq(index).find('i').text())) {
 						let poemmill = ["<p>亲爱的你呀 我们好久没见</p ><p>有没有长大一点儿</p ><p>破旧的以前 留不住的渔湾</p ><p>停在荒草漫天</p >",
@@ -183,6 +184,7 @@
 	</div>
 
 </html>
+
 
 
 
